@@ -25,3 +25,10 @@
     - The repository will then copy to your Github
     - In Git bash terminal, change directory to the destination folder and 
         type "git clone <URL of the remote repository, e.g. https://github.com/octocat/Spoon-Knife.git>"
+
+6. To delete a repository
+    - Go to the web repository
+    - Go to 'settings'
+    - Scroll down to danger zone
+    - Select 'Delete this repository'
+
