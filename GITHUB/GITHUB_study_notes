@@ -4,10 +4,24 @@
     - Connect your local repository to the github repository (add a remote)
     - Push your code up to github using the new remote
 
-Push the local repository to GITHUB
+2. Push the local repository to GITHUB
     - git remote add origin https://github.com/stanleyshto/xxxxxxxx.git
         origin is the alias of the remote repository
         this is to create the remote repository on Github
     - git push -u origin master
-        master is the local repository
+        master is the local repository for pushing
         this is to push the local repository to Github
+
+3. To list out all available remote
+    - git remote -v
+
+4. To fetch the remote repository and sync to local 
+    - git pull origin master
+
+5. To fork & clone a repository
+    - Goto https://github.com/search for search repository
+    - Goto the repository
+    - Click button "Fork" on the top right corner
+    - The repository will then copy to your Github
+    - In Git bash terminal, change directory to the destination folder and 
+        type "git clone <URL of the remote repository, e.g. https://github.com/octocat/Spoon-Knife.git>"
