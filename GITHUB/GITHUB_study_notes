@@ -1,0 +1,13 @@
+1. Step for using GITHUB
+    - Add/commit your code
+    - Goto Github and make a new repository
+    - Connect your local repository to the github repository (add a remote)
+    - Push your code up to github using the new remote
+
+Push the local repository to GITHUB
+    - git remote add origin https://github.com/stanleyshto/study-notes.git
+        origin is the alias of the remote repository
+        this is to create the remote repository on Github
+    - git push -u origin master
+        master is the local repository
+        this is to push the local repository to Github
