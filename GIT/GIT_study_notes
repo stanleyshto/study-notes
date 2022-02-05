@@ -45,3 +45,6 @@ Useful Command in GIT
 11. Merge a branch
     - change directory to branch you want to merge with another branch
     - git merge <branch name>
+
+12. Remove repository
+    - Change to the repository root directory and delete the .git folder
