@@ -5,7 +5,7 @@
     - Push your code up to github using the new remote
 
 Push the local repository to GITHUB
-    - git remote add origin https://github.com/stanleyshto/study-notes.git
+    - git remote add origin https://github.com/stanleyshto/xxxxxxxx.git
         origin is the alias of the remote repository
         this is to create the remote repository on Github
     - git push -u origin master

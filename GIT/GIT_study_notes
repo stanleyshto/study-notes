@@ -2,7 +2,7 @@ Useful Command in GIT
 
 1. Start GIT
     - Type 'GIT Bash' at the command prompt to start the GIT bash terminal
-    - Type 'git config --global user.email “stanleyshto@gmail.com”' to identify yourself with GIT
+    - Type 'git config --global user.email “e-mail address”' to identify yourself with GIT
 
 2. Init an empty repository
     - Change directory to the folder where you want to build the repository
