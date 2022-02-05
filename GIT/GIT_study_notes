@@ -1,0 +1,47 @@
+Useful Command in GIT
+
+1. Start GIT
+    - Type 'GIT Bash' at the command prompt to start the GIT bash terminal
+    - Type 'git config --global user.email “stanleyshto@gmail.com”' to identify yourself with GIT
+
+2. Init an empty repository
+    - Change directory to the folder where you want to build the repository
+    - Type 'git init' to initialize an empty repository.  If it is executed successfully, a .git folder will be created.
+
+3. Change directory in gif bash terminal
+    - use / as separator.
+        e.g. "C:\User\test git"  => cd /c/User/"test git"
+
+4. Add files to / update file in staging area
+    - git add <file1> <file2> <file3> ....
+    - git all . for all files
+    - This action should be done whenever there is new files added or existing files updated 
+
+5. Check the status for commit
+    - git status
+
+6. Commit Change
+    - git commit -m "Commit Message"
+
+7. Check the commit history
+    - git log
+
+8. Create a new branch
+    - git branch <new branch>
+    - if you also want to switch to the branch after the branch is created:
+        git branch -b <new branch>
+
+9. Check the available branches
+    - git branch
+
+10. Switch to another branch or other versions
+    - branch
+        git checkout <branch name>
+        git checkout master
+    - other versions within the branch
+        git checkout <hash code> - The hash code can be identified by referring to "git log" 
+        (e.g. 8c95406bef90384f120cd32433cf1f316f561b0d)
+
+11. Merge a branch
+    - change directory to branch you want to merge with another branch
+    - git merge <branch name>
