@@ -1,0 +1,68 @@
+The procedure to deploy telegram automation program on Heroku
+
+1. Create a Github account
+
+2. Create a Heroku account
+    - To logon the Heroku account, you need the "Authenticator Apps" which can be downloaded from app store.
+
+3. Prepare the following files along with the python program under the same folder
+    - Proclib
+        worker: python <python program name>.py   
+            (Note 1: Must enter a space after :.  The program won't execute if otherwise.)
+            (Note 2: python must start with small 'p', Capital 'P' will cause Heroku unable to execute the python)
+    - requirements.txt
+        Contains the package required for program execution.
+        e.g Telethon==1.24.0
+    - runtime.txt
+        Contains the version of the python
+        e.g. python-3.9.7
+
+4. Prepare repository on local Git
+    -   Change directory to the application root directory
+    -   git init    (to initialize the repository)
+    -   git add .   (to move all files to staging)
+    -   git commit -m "Commit Message"  (Commit the change)
+
+5.  Prepare reposity on remote Github
+    -   Logon Github
+    -   Create a new repository (Note 1: Set the repository as private)
+    -   git remote add origin <URL of the .git file>
+    -   git push -u origin master   (to push the master branch to remote repository)
+
+6.  Create application on Heroku
+    -   Logon Heroku
+    -   Create new app
+        - Deployment method : GitHub
+        - Connect to Github : The repo name
+        - Automatic deploys : Click on (Deployment will be done automatically whenever the Github repository is updated)
+        - for first time deployment - suggest to run manual deploy once
+    -   Verify the deployment result by checking "Activity" tag
+    -   In the "Resources" tag, Create Dyno by clicking the "write" icon, toggle on the switch and confirm
+
+Programming consideration of Telethone
+
+1.  Example program:  refer the repository : stanleyshto/auto-forward-telegram (this is a private program)
+
+2.  Useful package:
+        - asyncio :    support event driven programming
+        - telethon :    support telegram automation
+
+    Useful variables:
+        - api_id, api_hash :    Every telegram account has its own set of id & hash.  Similar to user ID & Password.
+            It should not be revealed to other people.
+            To get these 2 values : 
+                -   Go my.telegram.org
+                -   Input phone number
+                -   The confirmation code will be received via telegram
+                -   Input the confirmation code and select "API development tools"
+                -   make down the api_id & api_hash
+                -   press <Save changes>
+    
+    Useful function call:
+        -   client = TelegramClient( session_name, api_id, api_hash)
+            client.start()
+                -   This is to instantiate an telegram client object and start the communication session
+                -   Parameter 'session_name', this can be any string (e.g. ming).  After first invocation, the file '<session_name>.session' will be created.  This store the information required for login. 
+
+
+
