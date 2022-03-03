@@ -3,6 +3,10 @@ from anyio import typed_attribute
 import numpy as np
 import pandas as pd
 from sqlalchemy import true
+import os
+import datetime
+
+os.chdir("d:\myfiles\Study Notes\Python")
 
 ### Define a pandas data frame
 #Method 1: Define rows as list entry
@@ -50,6 +54,9 @@ print(df_1_seasons.loc[ df_1_seasons['season'].str.startswith('a') ]) # select r
 
 
 ## Selct columns
+# select the index column
+print(f"index column = {df_1_seasons.index}")
+
 # select the first column
 print(df_1_seasons.iloc[:,0])
 
@@ -65,6 +72,7 @@ print(df_1_seasons.iloc[[1,2], [0,3]]) # second & third rows, first & fourth col
 print(df_1_seasons.loc[[0,1],['season', 'start_month']]) # first & second rows, column 'season' and 'start_month'
 print(df_1_seasons.loc[ 0:2, 'season':'end_month']) # first 3 rows, columns from 'season' to 'end_month'
 print(df_1_seasons.loc[ df_1_seasons['season'] == 'spring', 'end_month':'temperature']) # records with season = spring & only extract columns from end_month to temperature
+print(df_1_seasons.loc[ df_1_seasons['season'] == 'spring']) # records with season = spring 
 
 ## Index (set, reset, sort)
 df_1_indexed= df_1_seasons.set_index('season')  # Set the column 'season' as index
@@ -75,6 +83,15 @@ print(df_1_seasons)
 df_2_seasons.set_index('season', inplace=True)
 print(df_2_seasons)
 
+# add new columns to a dataframe with values from a list
+remark = ['A', 'B', 'C', 'D']
+df['remark'] = remark
+
+# add a new row to a dataframe with a dictionary
+d2 = pd.DataFrame()
+row_dict = {"A":10, "B":11, "C":12}
+df2 = df2.append(row_dict, ignore_index = True)
+ 
 # Reset the index
 df_2_seasons.reset_index(inplace=True)
 print(df_2_seasons)
@@ -85,8 +102,13 @@ print(df_1_indexed.loc['winter'])
 # Sort index
 df_1_indexed.sort_index(inplace=True)
 
+# drop missing value entries
+df_2_seasons.dropna(inplace=True)
+
 ## Write the dataframe to csv
-df_2_seasons.to_csv('./pandas_sample_1b.csv', index=False) # with index=False to prevent the numeric index is shown in the file
+df_2_seasons.to_csv('./pandas_sample_1b.csv', index=False) # with index=False to prevent the numeric index to show in the csv file
 
-
-
+## Convert string to datetime
+df_1_seasons['start_date'] = ["2022-03-01","2022-06-01","2022-09-01","2022-12-01"]
+df_1_seasons['start_date'] = pd.to_datetime(df_1_seasons['start_date'])
+print(type(df_1_seasons['start_date'][0])) # <class 'pandas._libs.tslibs.timestamps.Timestamp'>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title -->
+    <title>basic HTML</title>
+</head>
+<body>
+    <!-- Heading -->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+
+    <!-- Paragraph -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur atque impedit hic quasi iusto assumenda voluptatum magnam cum saepe, et quod animi? Optio rem minima rerum harum! Doloremque, fuga itaque.</p>
+
+    <!-- Picture -->
+    <img src="giphy.gif"  alt="giphy.gif not loaded">
+
+    <!-- Hyperlink -->
+    <a href="https://www.google.com">Google</a> <!-- with text anchor -->
+    <a href="#endofpage">Goto end of page</a> <!-- goto another location within the page -->
+    <a href="#">This is a dead link</a><!-- dead link-->
+    <a href="https://www.google.com"><img src="giphy2.gif"  alt="giphy2.gif not loaded"></a> <!-- with image anchor -->
+    <a href="https://www.google.com" target="_blank">Google opened in new tab</a> <!-- hyperlink opened in new tab -->
+  
+    <!-- New line -->
+    <br>
+ 
+    <!-- division to group elements -->
+    <div>
+        <!-- Unordered List -->
+        <ul>
+            <li>Unordered entry 1</li>
+            <li>Unordered entry 2</li>
+            <li>Unordered entry 3</li>    
+        </ul>
+
+        <!-- Unordered List -->
+        <ol>
+            <li>Ordered entry 1</li>
+            <li>Ordered entry 2</li>
+            <li>Ordered entry 3</li>    
+        </ol>
+    </div>
+
+    <!-- Form -->
+    <form action="/url-where-you-want-to-submit-form-data">
+        <!-- text field -->
+        <label for="intext">Label of text</label><br>
+        <input type="text" id="intext" name="in_text" placeholder="placeholder here"><br>
+
+        <!-- mandatory input field -->
+        <label for="in_mandatory_field">Label of a mandatory field</label><br>
+        <input type="text" id="in_mandatory_field" name="mandatory_field" required><br>
+
+        <!-- radio button -->
+        <label for="inradio1">Radio 1</label>
+        <input type="radio" id="inradio1" name="radio_choice" value="inradio1" checked>
+        <label for="inradio2">Radio 2</label>
+        <input type="radio" id="inradio2" name="radio_choice" value="inradio2">
+
+        <!-- checkbox -->
+        <label for="checkbox_1">Checkbox 1</label>
+        <input type="checkbox" id="inCB1" name="inCB1" value="inchecked1" checked>
+        <label for="checkbox_2">Checkbox 2</label>
+        <input type="checkbox" id="inCB2" name="inCB2" value="inchecked2">        
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button> 
+    </form>
+
+    <p id="endofpage">End of Page</p>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+1.  Create a virtual environment under a new project folder
+2.  In the project folder, create a 'src' folder
+3.  Go into the src folder
+4.  Init a new django project by typing:
+    - django-admin startproject <project name> . e.g. django-admin startproject trydjango . 
+5.  Start the server
+    - python manage.py runserver

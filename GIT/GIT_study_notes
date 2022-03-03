@@ -14,7 +14,7 @@ Useful Command in GIT
 
 4. Add files to / update file in staging area
     - git add <file1> <file2> <file3> ....
-    - git all . for all files
+    - git add . for all files
     - This action should be done whenever there is new files added or existing files updated 
 
 5. Check the status for commit

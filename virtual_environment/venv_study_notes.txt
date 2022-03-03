@@ -1,0 +1,19 @@
+1.  Create virtual environment
+-  Create a new project folder and go into the project folder e.g. learn_django
+-  Go to the directory where you want to create a new virtual environment
+- type python -m venv venv    # a venv folder will be created under the project folder
+                                        # e.g. type 'python -m venv venv' in the learn_django folder
+
+2.  Activate virtual environment
+- Run activate in the folder venv/Scripts e.g. venv/Scripts/activate
+
+3. Export package requirement
+- Run 'pip freeze > requirements.txt' to export the package versions to a requirements file
+
+4. To install package according to the requirements.txt
+- pip install -r requirements.txt
+
+5. Deactivate the virtual environment
+- Run 'deactivate'
+
+6. To delete the virtual environment, just remove the folder with rmdir <project name> /s
