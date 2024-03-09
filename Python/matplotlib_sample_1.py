@@ -1,7 +1,7 @@
 from matplotlib import pyplot as plt
 import random, os
 
-os.chdir('D:\myfiles\Study Notes\Python')
+os.chdir('D:/myfiles/Study Notes/Python')
 
 ages_x = [i for i in range(25,36)]
 dev_y = [ random.randint(10000,50000) for i in range(0, 11)]
@@ -16,7 +16,7 @@ plt.ylabel('Median Salary (USD)') #label of y-axis
 plt.title('Median Salary (USD) by Age') # chart title
 plt.tight_layout()
 
-plt.savefig('.\graph1.png')  #use this commoand to save the chart
+plt.savefig('./graph1.png')  #use this commoand to save the chart
 
 plt.show()  #use this commoand to show the chart
 

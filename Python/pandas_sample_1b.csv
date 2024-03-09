@@ -1,5 +1,5 @@
-season,start_month,end_month,temperature
-spring,3,5,warm
-summer,6,8,hot
-autumn,9,11,cool
-winter,12,2,cold
+season,start_month,end_month,temperature,remark
+spring,3,5,warm,A
+summer,6,8,hot,B
+autumn,9,11,cool,C
+winter,12,2,cold,D

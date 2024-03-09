@@ -29,7 +29,7 @@ dict_seasons =          {   'season':       column_season,
                             'end_month':    column_end_month,
                             'temperature':  column_temperature  }
 df_2_seasons =  pd.DataFrame(dict_seasons)
-print(f"Define by using dictionary:\n{df_2_seasons}\n")
+print(f"Define by columns using dictionary:\n{df_2_seasons}\n")
 
 # Method 3 : Define by reading csv with 'season' column being the index column
 df_3_seasons = pd.read_csv('pandas_sample_1a.csv', index_col='season')
@@ -85,12 +85,13 @@ print(df_2_seasons)
 
 # add new columns to a dataframe with values from a list
 remark = ['A', 'B', 'C', 'D']
-df['remark'] = remark
+df_2_seasons['remark'] = remark
 
 # add a new row to a dataframe with a dictionary
 d2 = pd.DataFrame()
 row_dict = {"A":10, "B":11, "C":12}
-df2 = df2.append(row_dict, ignore_index = True)
+df2 = df_2_seasons.append(row_dict, ignore_index = True)
+print(df2)
  
 # Reset the index
 df_2_seasons.reset_index(inplace=True)
@@ -112,3 +113,8 @@ df_2_seasons.to_csv('./pandas_sample_1b.csv', index=False) # with index=False to
 df_1_seasons['start_date'] = ["2022-03-01","2022-06-01","2022-09-01","2022-12-01"]
 df_1_seasons['start_date'] = pd.to_datetime(df_1_seasons['start_date'])
 print(type(df_1_seasons['start_date'][0])) # <class 'pandas._libs.tslibs.timestamps.Timestamp'>
+
+## Convert pandas series to list
+s = pd.Series([1,2,3,4])
+print(s.values.tolist())
+
